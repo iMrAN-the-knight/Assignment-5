@@ -27,7 +27,7 @@
             <label class="label cursor-pointer">
              
               <input type="checkbox" checked="checked" class="checkbox checkbox-primary" />
-              <h2 class="font-bold text-2xl">23</h2>
+              <h2 class="font-bold text-2xl ml-2" id="nav-amount">23</h2>
             </label>
           </div>
           <div class="bg-[#F4F7FF] border rounded-full mr-9">
@@ -43,11 +43,11 @@
    </nav>
 
    <!-- MAIN -->
-    <main class="mt-8 bg-white p-5 rounded-xl">
+    <main class="mt-8  p- rounded-xl">
         <div class=" mx-auto grid grid-cols-12 gap-4">
         
             <!-- Left-->
-            <div class="col-span-9 ">
+            <div class="col-span-9 bg-white p-4 rounded-xl shadow-md">
                 
                 <!-- Top  -->
                 <div class="grid grid-cols-4 gap-4">
@@ -65,7 +65,7 @@
                     </div>
                     <div class="bg-[#F4F7FF] p-4 gap-2 rounded-xl shadow-md flex items-center justify-center">
                         <img src="assets/calender.png" alt="" class="bg-white p-2 rounded-full">
-                        <p class="text-sm text-gray-500">Wed,<br><span class="text-lg font-bold">Jul 28 2025</span></p>
+                        <p id="date" class="text-sm text-gray-500">Wed,<br><span class="text-lg font-bold">Jul 28 2025</span></p>
                        
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                 <div class="grid grid-cols-3 gap-4 mt-6  ">
                     <div class="bg-[#F4F7FF] p-4 rounded-xl h- shadow-md">
                         <p class="bg-white w-24 text-center rounded-lg p-2 text-sm  text-black mt-4 mb-2">ShopEase</p>
-                        <p class="font-bold mb-3">Fix Mobile Button Issue</p>
+                        <p id="title" class="font-bold mb-3 titlw">Fix Mobile Button Issue</p>
                         <div class="bg-white h-16 rounded-md text-center items-center content-center line-clamp-2"><p class="text-base text-gray-400 mt-4 mb-2 " >Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                             and ensure onClick works properly</p></div>
                         <hr class="border-t-2 border-dashed border-gray-300 mt-6 mb-2">
@@ -85,7 +85,7 @@
                     <!-- 2 -->
                     <div class="bg-[#F4F7FF] p-4 rounded-xl h- shadow-md">
                         <p class="bg-white w-24 text-center rounded-lg p-2 text-sm text-black mt-4 mb-2">CloudSync</p>
-                        <p class="font-bold mb-3">Add Dark Mode</p>
+                        <p class="titlw font-bold mb-3 ">Add Dark Mode</p>
                         <div class="bg-white h-16 rounded-md text-center items-center content-center line-clamp-2"><p class="text-base text-gray-400 mt-4 mb-2" >Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p></div>
                         <hr class="border-t-2 border-dashed border-gray-300 mt-6 mb-2">
                         <div class="flex gap-4 justify-between items-center ">
@@ -141,12 +141,12 @@
             
             <!-- Right -->
             <div class="col-span-3 items-center justify-center  bg-white p-4 rounded-xl shadow-md">
-                <div class="grid gap-3 items-center justify-center"><div class="flex"><img src="assets/activity.png" alt="">
+                <div class=" flex flex-col gap-3 items-center justify-center"><div class="flex"><img src="assets/activity.png" alt="">
                     <p class="font-bold">Activity Log</p></div>
                 <button class="btn btn-primary  btn-sm  mt-2">Clear History</button></div>
-                <div class="mt-4 gap-5 ">
-                    <p class="text-sm text-gray-500 p-2 bg-[#F4F7FF] mb-4">You have completed the task 'Add Dark Mode' at 12:48 PM</p>
-                    <p class="text-sm text-gray-500 p-2 bg-[#F4F7FF]">You have completed the task 'Fix Mobile Button' at 12:30 PM</p>
+                
+                 <div id="activitylog" class="  text-sm text-gray-500 grid justify-center items-center text-center" >
+                    
                 </div>
             </div>
             
