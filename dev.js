@@ -21,23 +21,29 @@ const task = document.getElementById("task-amount").innerText;
       document.getElementById("task-amount").innerText = taskAmount;
     navAmount++;
         document.getElementById("nav-amount").innerText = navAmount;
-        let titole =event.target.querySelector(".titlw").innerText;
 
-
-
-
+        let taskCard = event.target.closest(".cards");
+        let title = taskCard.querySelector(".titlw").innerText;
+console.log(title);
 
           const now = new Date();
 const formattedTime = now.toLocaleTimeString();
 
+const clearHistoryb = document.querySelector(".clearbtn");
+const activityLog = document.getElementById("activitylog");
+
+
+clearHistoryb.addEventListener("click", function() {
+    activityLog.innerHTML = ""; 
     
+});
     const log = document.getElementById("activitylog");
     const p = document.createElement("p");
    
     p.innerText = `
    
     
-    You have completed the task ${titole} at  ${formattedTime} `;
+    You have completed the task ${title} at  ${formattedTime} `;
    p.style.margin = "0"
     p.style.marginBottom = "10px";
     p.style.backgroundColor = "#F4F7FF";
@@ -52,6 +58,16 @@ const formattedTime = now.toLocaleTimeString();
      
     log.appendChild(p);
    
+
+
+
+   
+
+
+
+
+
+
     });
  
 
@@ -59,3 +75,5 @@ const formattedTime = now.toLocaleTimeString();
 
 let today = new Date().toDateString();
 document.getElementById("date").innerText = today;
+
+
