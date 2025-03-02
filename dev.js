@@ -87,3 +87,8 @@ function colorChanage(){
   const colors = document.getElementById("color").addEventListener("click", function(event){  
     document.body.style.backgroundColor = colorChanage();
   });
+
+  document.getElementById("question").addEventListener("click", function(event){
+    
+    window.location.href = "./question.html";
+  });
