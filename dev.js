@@ -8,11 +8,11 @@ const task = document.getElementById("task-amount").innerText;
  for (const button of buttons) {
     button.addEventListener('click', function(event) {
         alert('Board updated successfully');
-        console.log('Button clicked');
+        
        event.target.setAttribute('disabled', true);
         count++;
 
-      console.log(count);
+      
       if(count == 6){
         alert('Congrates!!! You have completed all the current task');
       }
@@ -24,7 +24,7 @@ const task = document.getElementById("task-amount").innerText;
 
         let taskCard = event.target.closest(".cards");
         let title = taskCard.querySelector(".titlw").innerText;
-console.log(title);
+
 
           const now = new Date();
 const formattedTime = now.toLocaleTimeString();
@@ -76,4 +76,14 @@ clearHistoryb.addEventListener("click", function() {
 let today = new Date().toDateString();
 document.getElementById("date").innerText = today;
 
+function colorChanage(){
+  const a = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  const c = Math.floor(Math.random() * 256);
+  return `rgb(${a}, ${b}, ${c})`;
+}
 
+
+  const colors = document.getElementById("color").addEventListener("click", function(event){  
+    document.body.style.backgroundColor = colorChanage();
+  });
